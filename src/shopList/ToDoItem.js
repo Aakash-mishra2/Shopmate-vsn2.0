@@ -11,5 +11,4 @@ function ToDoItem(props) {
     </div>
   );
 }
-
 export default ToDoItem;
