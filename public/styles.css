@@ -1,5 +1,5 @@
 body {
-  background-color: #ffeaa7;
+  background-color: #50a3a2;
   min-height: 70vh;
   padding: 1rem;
   box-sizing: border-box;
@@ -26,16 +26,19 @@ body {
   padding: 1rem;
   box-sizing: border-box;
 }
+
 .delta {
   min-height: 200 px;
   height: 50px;
 }
+
 .heading {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 1rem;
 }
+
 .heading h1 {
   transform: rotate(2deg);
   padding: 0.2rem 1.2rem;
@@ -60,20 +63,18 @@ body {
 }
 
 button {
-  padding: 0;
   border: none;
   font-family: "Architects Daughter", cursive;
   text-decoration: none;
   padding-bottom: 3px;
-  border-radius: 5px;
-  background-color: #ffeaa7;
+
+  background-color: #fdcb6e;
 }
+
 button span {
-  background: #f1f5f8;
+  background: #fdcb6e;
   display: block;
   padding: 0.5rem 1rem;
-  border-radius: 5px;
-  border: 2px solid hsl(198, 1%, 29%);
 }
 
 li {

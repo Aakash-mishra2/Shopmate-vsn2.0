@@ -7,6 +7,7 @@ function InputArea(props) {
         onChange={(event) => {
           props.onChecked(event);
         }}
+        placeholder="Enter Items and click Add button."
         type="text"
         value={props.inputText}
       />
