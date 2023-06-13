@@ -1,11 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import ToDoItem from "./ToDoItem";
 import InputArea from "./InputArea";
 import UserDetails from "./UserDetails";
+import { UserContext } from "../userContext";
 
-function App() {
+export default function ShopList() {
+
   const [inputText, setInputText] = useState("");
   const [items, setItems] = useState([]);
+  const auth = useContext(UserContext);
 
   function handleChange(event) {
     const newValue = event.target.value;
@@ -21,18 +24,21 @@ function App() {
 
   function deleteItem(id) {
     setItems((prevItems) => {
-      return prevItems.filter((item, index) => {
+      return prevItems.filter((index) => {
         return index !== id;
       });
     });
   }
-
+  function userLogoutHandler() {
+    auth.userData = { name: '', email: '', password: '' };
+    auth.logout();
+  }
   return (
     <div className="container">
       <UserDetails />
       <div className="heading">
         <h1>
-          Shopping List <br /> {new Date().toLocaleString()}
+          Shopping List <hr /> {new Date().toLocaleString()}
         </h1>
       </div>
       <InputArea
@@ -41,7 +47,7 @@ function App() {
         inputText={inputText}
       />
       <div>
-        <ul>
+        <li>
           {items.map((todoItem, index) => (
             <ToDoItem
               key={index}
@@ -50,10 +56,13 @@ function App() {
               onChecked={deleteItem}
             />
           ))}
-        </ul>
+        </li>
+        <li>
+          <p>Click here to logout</p>
+          <button onClick={userLogoutHandler}>LOGOUT</button>
+        </li>
       </div>
     </div>
   );
 }
 
-export default App;
