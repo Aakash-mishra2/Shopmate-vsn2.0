@@ -38,7 +38,7 @@ export default function ShopList() {
       <UserDetails />
       <div className="heading">
         <h1>
-          Shopping List <hr /> {new Date().toLocaleString()}
+          Shopping List <br /> {new Date().toLocaleString()}
         </h1>
       </div>
       <InputArea
@@ -47,7 +47,7 @@ export default function ShopList() {
         inputText={inputText}
       />
       <div>
-        <li>
+        <ul>
           {items.map((todoItem, index) => (
             <ToDoItem
               key={index}
@@ -56,11 +56,10 @@ export default function ShopList() {
               onChecked={deleteItem}
             />
           ))}
-        </li>
-        <li>
-          <p>Click here to logout</p>
-          <button onClick={userLogoutHandler}>LOGOUT</button>
-        </li>
+        </ul>
+        <ul>
+          <button onClick={userLogoutHandler}><span>LOGOUT</span></button>
+        </ul>
       </div>
     </div>
   );

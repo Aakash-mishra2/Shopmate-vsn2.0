@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { UserContext } from "../userContext";
 import './loginPage.css';
 
-export default function LoginPage() {
+export default function LoginPage(props) {
 
     const auth = useContext(UserContext);
 
@@ -15,10 +15,18 @@ export default function LoginPage() {
     function userLoginHandler(event) {
         event.preventDefault();
         console.log(contact);
-        auth.userData = contact;
+        auth.setUserData(contact);
         auth.login();
     }
-
+    function handleChange(event) {
+        const { name, value } = event.target;
+        setContact((previnfo) => {
+            return {
+                ...previnfo,
+                [name]: value
+            };
+        });
+    }
     return (
         <div className="login-form">
             <h1>
@@ -27,10 +35,10 @@ export default function LoginPage() {
             <p>Please login below </p>
             <form onSubmit={userLoginHandler}>
                 <input
-                    name="fName"
+                    name="name"
                     type="text"
+                    placeholder="Your Name"
                     onChange={handleChange}
-                    placeholder="First Name"
                     value={contact.name}
                 />
                 <input
@@ -47,7 +55,7 @@ export default function LoginPage() {
                     onChange={handleChange}
                     value={contact.password}
                 />
-                <button type="submit" >Submit</button>
+                <button type="submit" >LOGIN</button>
             </form>
         </div>
     )
