@@ -7,7 +7,7 @@ import { UserContext } from "../userContext";
 export default function ShopList() {
 
   const [inputText, setInputText] = useState("");
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState(["Click on item name to delete. "]);
   const auth = useContext(UserContext);
 
   function handleChange(event) {
@@ -58,7 +58,7 @@ export default function ShopList() {
           ))}
         </ul>
         <ul>
-          <button onClick={userLogoutHandler}><span>LOGOUT</span></button>
+          <button className="inputButtons" onClick={userLogoutHandler}><b>LOGOUT</b></button>
         </ul>
       </div>
     </div>

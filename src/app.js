@@ -17,8 +17,8 @@ export default function App() {
     if (!isLoggedIn) {
         routes = (
             <Routes>
+                <Route path="/list" element={<Navigate to="/" />} />
                 <Route path="/" element={<LoginPage />} />
-                <Route path="/*" element={<Navigate to="/" />} />
             </Routes>
         )
     }

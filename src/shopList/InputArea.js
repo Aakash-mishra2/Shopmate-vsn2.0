@@ -1,19 +1,20 @@
 import React from "react";
-
 function InputArea(props) {
   return (
     <div className="form">
-      <input
-        onChange={(event) => {
-          props.onChecked(event);
-        }}
-        placeholder="Enter Items and click Add button."
-        type="text"
-        value={props.inputText}
-      />
-      <button onClick={() => props.addItem()}>
-        <span>Add</span>
-      </button>
+      <span>
+        <input
+          onChange={(event) => {
+            props.onChecked(event);
+          }}
+          placeholder="Enter Items"
+          type="text"
+          value={props.inputText}
+        />
+      </span>
+      <span>
+        <button className="inputButtons" onClick={() => props.addItem()} style={{ width: 'auto' }} ><b> ADD </b></button>
+      </span>
     </div>
   );
 }

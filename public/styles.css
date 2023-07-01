@@ -16,8 +16,8 @@ body {
   width: 100%;
   height: auto;
   min-height: 200px;
-  max-width: 500px;
-  min-width: 250px;
+  max-width: auto;
+  min-width: auto;
   background: #f1f5f8;
   background-image: radial-gradient(#bfc0c1 7.2%, transparent 0);
   background-size: 25px 25px;
@@ -48,9 +48,9 @@ body {
 }
 
 .form input {
-  box-sizing: border-box;
+  box-sizing: content-box;
   background-color: transparent;
-  padding: 0.7rem;
+  padding: 0.3rem;
   border-bottom-right-radius: 15px 3px;
   border-bottom-left-radius: 3px 15px;
   border: solid 3px transparent;
@@ -58,23 +58,34 @@ body {
   font-family: "Architects Daughter", cursive;
   font-size: 1rem;
   color: hsla(260, 2%, 25%, 0.7);
-  width: 70%;
+  width: auto;
+  margin-left: 4px;
   margin-bottom: 20px;
 }
 
-button {
-  border: none;
-  font-family: "Architects Daughter", cursive;
-  text-decoration: none;
-  padding-bottom: 3px;
-
-  background-color: #fdcb6e;
+.form input:active {
+  display: block;
 }
 
-button span {
-  background: #fdcb6e;
-  display: block;
-  padding: 0.5rem 1rem;
+.form span {
+  display: inline-block;
+}
+
+button {
+  font-family: "Architects Daughter", cursive;
+  padding-bottom: 3px;
+}
+
+.inputButtons {
+  background-color: #fdcb6e;
+  color: hsla(260, 2%, 25%, 0.7);
+}
+
+.inputButtons:hover {
+  background-color: #50a3a2;
+  border: 2px solid white;
+  border-radius: 15%;
+  color: white;
 }
 
 li {
