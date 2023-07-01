@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { UserContext } from "../userContext";
+import { UserContext } from "../shared/context/userContext";
 export default function UserDetails() {
   const auth = useContext(UserContext);
   return (

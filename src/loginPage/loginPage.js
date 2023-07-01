@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { UserContext } from "../userContext";
+import { UserContext } from "../shared/context/userContext";
 import './loginPage.css';
 
 export default function LoginPage(props) {

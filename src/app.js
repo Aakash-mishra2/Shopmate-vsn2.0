@@ -2,7 +2,8 @@ import React, { useCallback, useState } from "react";
 import LoginPage from "./loginPage/loginPage";
 import ShopList from "./shopList/shoplist";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { UserContext } from "./userContext";
+import { UserContext } from "./shared/context/userContext";
+import ListStore from "./listStore/listStore";
 
 export default function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -18,6 +19,7 @@ export default function App() {
         routes = (
             <Routes>
                 <Route path="/list" element={<Navigate to="/" />} />
+                <Route path="/listStore" element={<Navigate to="/" />} />
                 <Route path="/" element={<LoginPage />} />
             </Routes>
         )
@@ -25,7 +27,8 @@ export default function App() {
     else {
         routes = (
             <Routes>
-                <Route path="/" element={<Navigate to="/list" />} />
+                <Route path="/" element={<Navigate to="/listStore" />} />
+                <Route path="/listStore" element={<ListStore />} />
                 <Route path="/list" element={<ShopList />} />
             </Routes>
         )

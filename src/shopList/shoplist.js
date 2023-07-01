@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import ToDoItem from "./ToDoItem";
 import InputArea from "./InputArea";
 import UserDetails from "./UserDetails";
-import { UserContext } from "../userContext";
+import { UserContext } from "../shared/context/userContext";
 
 export default function ShopList() {
 
