@@ -23,11 +23,9 @@ export default function ShopList() {
   }
 
   function deleteItem(id) {
-    setItems((prevItems) => {
-      return prevItems.filter((index) => {
-        return index !== id;
-      });
-    });
+    setItems(
+      previousItems => previousItems.filter((item, index) => index !== id)
+    );
   }
   function userLogoutHandler() {
     auth.userData = { name: '', email: '', password: '' };
