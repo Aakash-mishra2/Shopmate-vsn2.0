@@ -1,0 +1,11 @@
+.delta {
+    min-height: 200 px;
+    height: 50px;
+}
+
+
+li {
+    text-align: left;
+    position: relative;
+    padding: 0.5rem;
+}

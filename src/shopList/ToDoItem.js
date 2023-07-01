@@ -1,4 +1,5 @@
 import React from "react";
+import './styles/ToDoItem.css';
 
 function ToDoItem(props) {
   return (

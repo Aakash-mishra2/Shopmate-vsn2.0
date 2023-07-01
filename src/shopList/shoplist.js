@@ -4,6 +4,8 @@ import InputArea from "./InputArea";
 import UserDetails from "./UserDetails";
 import { UserContext } from "../shared/context/userContext";
 
+import './styles/shoplist.css';
+
 export default function ShopList() {
 
   const [inputText, setInputText] = useState("");
@@ -33,7 +35,7 @@ export default function ShopList() {
   }
   return (
     <div className="container">
-      <UserDetails />
+      <UserDetails className="container" />
       <div className="heading">
         <h1>
           Shopping List <br /> {new Date().toLocaleString()}

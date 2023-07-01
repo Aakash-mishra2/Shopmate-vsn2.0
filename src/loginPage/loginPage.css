@@ -1,6 +1,6 @@
 .login-form {
-    margin: 10% auto;
-    padding: 80px 0;
+    margin: 3% auto;
+    padding: 40px 0;
     text-align: center;
     background-color: #50a3a2;
 }
@@ -8,6 +8,10 @@
 .login-form h1 {
     font-size: 40px;
     font-weight: 200;
+}
+
+.login-form>p {
+    margin: 10px 10px;
 }
 
 input {

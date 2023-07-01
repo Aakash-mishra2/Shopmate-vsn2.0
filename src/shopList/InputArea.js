@@ -1,4 +1,6 @@
 import React from "react";
+import './styles/InputArea.css';
+
 function InputArea(props) {
   return (
     <div className="form">

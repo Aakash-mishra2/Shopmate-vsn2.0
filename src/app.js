@@ -27,7 +27,7 @@ export default function App() {
     else {
         routes = (
             <Routes>
-                <Route path="/" element={<Navigate to="/listStore" />} />
+                <Route path="/" element={<Navigate to="/list" />} />
                 <Route path="/listStore" element={<ListStore />} />
                 <Route path="/list" element={<ShopList />} />
             </Routes>

@@ -30,7 +30,7 @@ export default function LoginPage(props) {
     return (
         <div className="login-form">
             <h1>
-                Hello {contact.name}
+                Welcome {contact.name} !
             </h1>
             <p>Please login below </p>
             <form onSubmit={userLoginHandler}>
@@ -40,6 +40,7 @@ export default function LoginPage(props) {
                     placeholder="Your Name"
                     onChange={handleChange}
                     value={contact.name}
+                    autoComplete="off"
                 />
                 <input
                     name="email"
@@ -47,6 +48,7 @@ export default function LoginPage(props) {
                     placeholder="Email Address"
                     onChange={handleChange}
                     value={contact.email}
+                    autoComplete="off"
                 />
                 <input
                     name="password"
@@ -54,6 +56,7 @@ export default function LoginPage(props) {
                     type="password"
                     onChange={handleChange}
                     value={contact.password}
+                    autoComplete="off"
                 />
                 <button type="submit" >LOGIN</button>
             </form>

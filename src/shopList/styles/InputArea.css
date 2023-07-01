@@ -1,0 +1,40 @@
+.form input {
+    box-sizing: content-box;
+    background-color: transparent;
+    padding: 0.3rem;
+    border-bottom-right-radius: 15px 3px;
+    border-bottom-left-radius: 3px 15px;
+    border: solid 3px transparent;
+    border-bottom: dashed 3px #fdcb6e;
+    font-family: "Architects Daughter", cursive;
+    font-size: 1rem;
+    color: hsla(260, 2%, 25%, 0.7);
+    width: auto;
+    margin-left: 4px;
+    margin-bottom: 20px;
+}
+
+.form input:active {
+    display: block;
+}
+
+.form span {
+    display: inline-block;
+}
+
+button {
+    font-family: "Architects Daughter", cursive;
+    padding-bottom: 3px;
+}
+
+.inputButtons {
+    background-color: #fdcb6e;
+    color: hsla(260, 2%, 25%, 0.7);
+}
+
+.inputButtons:hover {
+    background-color: #50a3a2;
+    border: 2px solid white;
+    border-radius: 15%;
+    color: white;
+}
