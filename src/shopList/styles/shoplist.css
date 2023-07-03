@@ -1,7 +1,8 @@
 .container {
     height: auto;
+    margin: 2% 25%;
     min-height: 200px;
-    max-width: 60%;
+    max-width: 40%;
     min-width: 20%;
     background: #f1f5f8;
     background-image: radial-gradient(#bfc0c1 7.2%, transparent 0);
@@ -25,6 +26,7 @@
     border-radius: 20% 5% 20% 5%/5% 20% 25% 20%;
     background-color: #fdcb6e;
     font-size: 1.5rem;
+    margin-top: 10px;
 }
 
 button {
@@ -40,6 +42,6 @@ button {
 .inputButtons:hover {
     background-color: #50a3a2;
     border: 2px solid white;
-    border-radius: 15%;
+    border-radius: 10%;
     color: white;
 }

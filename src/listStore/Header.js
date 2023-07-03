@@ -10,8 +10,8 @@ function Header() {
     }
     return (
         <header>
-            <h1>{auth.userData.name}</h1>
-            <p>{auth.userData.email}</p>
+            <h1 align="left">{auth.userData.name}</h1>
+            <p align="left">{auth.userData.email}</p>
             <Button className="header-btn" onClick={userExit}>LOGOUT</Button>
         </header>);
 }

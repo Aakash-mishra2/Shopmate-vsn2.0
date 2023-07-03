@@ -4,7 +4,11 @@ import './styles/footer.css';
 function Footer() {
     const day = new Date();
     const currentYear = day.getFullYear();
-    return (<footer><p>Copyright @ {currentYear}</p></footer>);
+    return (
+        <footer>
+            <p>Thank You for shopping with us ❤️🛒! </p>
+            <p>Copyright @ {currentYear} </p>
+        </footer>);
 }
 
 export default Footer;

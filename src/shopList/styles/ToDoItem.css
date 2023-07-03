@@ -1,11 +1,14 @@
 .delta {
-    min-height: 200 px;
-    height: 50px;
+    max-height: auto;
+    max-width: 80% !important;
+    margin: 2% auto !important;
 }
 
 
 li {
     text-align: left;
     position: relative;
+    left: 65px;
     padding: 0.5rem;
+    margin: 0.5rem;
 }

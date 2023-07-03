@@ -18,5 +18,6 @@ header p {
 }
 
 .header-btn {
-    align-content: end;
+    position: relative;
+    left: 40%;
 }
