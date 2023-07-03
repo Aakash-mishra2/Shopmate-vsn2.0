@@ -3,6 +3,7 @@ import ToDoItem from "./ToDoItem";
 import InputArea from "./InputArea";
 import UserDetails from "./UserDetails";
 import { UserContext } from "../shared/context/userContext";
+import Button from "../shared/formElements/Button";
 
 import './styles/shoplist.css';
 
@@ -58,6 +59,7 @@ export default function ShopList() {
           ))}
         </ul>
         <ul>
+          <Button className="inputButtons" to="/listStore" ><b>VIEW STORE </b></Button>
           <button className="inputButtons" onClick={userLogoutHandler}><b>LOGOUT</b></button>
         </ul>
       </div>
