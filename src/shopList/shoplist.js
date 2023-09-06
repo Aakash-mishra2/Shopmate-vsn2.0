@@ -59,7 +59,7 @@ export default function ShopList() {
           ))}
         </ul>
         <ul>
-          <Button className="inputButtons" to="/listStore" ><b>VIEW STORE </b></Button>
+          <Button className="inputButtons" to="/listStore" ><b> ALL Lists </b></Button>
           <button className="inputButtons" onClick={userLogoutHandler}><b>LOGOUT</b></button>
         </ul>
       </div>

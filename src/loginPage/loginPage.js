@@ -1,7 +1,8 @@
-import React, { useContext, useState } from "react";
+import React, { useCallback, useContext, useState } from "react";
 import { UserContext } from "../shared/context/userContext";
 import './loginPage.css';
-
+import Input
+    from "../shared/formElements/Input";
 export default function LoginPage(props) {
 
     const auth = useContext(UserContext);
@@ -27,6 +28,9 @@ export default function LoginPage(props) {
             };
         });
     }
+
+
+
     return (
         <div className="login-form">
             <h1>
@@ -34,13 +38,14 @@ export default function LoginPage(props) {
             </h1>
             <p>Please login below </p>
             <form onSubmit={userLoginHandler}>
-                <input
-                    name="name"
+                <Input
+                    id="name"
+                    element="input"
                     type="text"
-                    placeholder="Your Name"
-                    onChange={handleChange}
+                    placeholder="Enter Name"
                     value={contact.name}
-                    autoComplete="off"
+                    errorText="Invalid input entered!"
+                    onInput={inputHandler}
                 />
                 <input
                     name="email"
