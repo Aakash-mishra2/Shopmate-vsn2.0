@@ -13,6 +13,7 @@ function Header() {
             <h1 align="left">{auth.userData.name}</h1>
             <p align="left">{auth.userData.email}</p>
             <Button className="header-btn" onClick={userExit}>LOGOUT</Button>
+            <Button className= "header-btn" danger to="/list"> Create New list</Button>
         </header>);
 }
 

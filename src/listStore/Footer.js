@@ -7,7 +7,7 @@ function Footer() {
     return (
         <footer>
             <p>Thank You for shopping with us ❤️🛒! </p>
-            <p>Copyright @ {currentYear} </p>
+            <p>Copyright Skybazaar@{currentYear} </p>
         </footer>);
 }
 
